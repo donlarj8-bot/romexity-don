@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* GLOBAL FONT */
+
+body{
+  font-family: 'DM Sans', sans-serif;
+  margin:0;
+  padding:0;
+  min-height:100vh;
+  overflow-x:hidden;
+
+  /* animated gradient background */
+  background: linear-gradient(
+    -45deg,
+    #f9fafb,
+    #f3f4f6,
+    #eef2ff,
+    #fdf2f8
+  );
+
+  background-size: 400% 400%;
+  animation: gradientFlow 18s ease infinite;
+}
+
+/* PAGE FADE-IN */
+
+@keyframes fadePage{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+body{
+  animation: fadePage 0.6s ease;
+}
+
+/* SMOOTH BACKGROUND ANIMATION */
+
+@keyframes gradientFlow{
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
+  }
+}
+
+/* SCROLL SMOOTH */
+
+html{
+  scroll-behavior:smooth;
+}
+
+/* REMOVE DEFAULT BUTTON BORDER */
+
+button{
+  cursor:pointer;
+}
