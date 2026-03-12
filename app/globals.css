@@ -11,12 +11,13 @@ overflow-x:hidden;
 
 /* plain white background */
 background:#ffffff;
-
-/* page fade animation */
-animation: fadePage 0.6s ease;
 }
 
 /* PAGE FADE-IN ANIMATION */
+
+.page-fade{
+animation: fadePage 0.6s ease;
+}
 
 @keyframes fadePage{
 from{
