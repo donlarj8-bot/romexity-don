@@ -2,7 +2,7 @@
 
 import ShopCard from "./ShopCard";
 
-export default function ShopGrid() {
+export default function ShopGrid({ search }) {
 
   const shops = [
     {
@@ -10,6 +10,7 @@ export default function ShopGrid() {
       image: "/kfc.jpg",
       address: "Madhapur, Hyderabad",
       phone: "9876543210",
+      category: "food",
       products: [
         { name: "Chicken Bucket", price: 100 },
         { name: "Zinger Burger", price: 120 },
@@ -21,6 +22,7 @@ export default function ShopGrid() {
       image: "/lenskart.jpg",
       address: "Banjara Hills, Hyderabad",
       phone: "9123456780",
+      category: "electronics",
       products: [
         { name: "Sunglasses", price: 999 },
         { name: "Computer Glasses", price: 799 },
@@ -32,6 +34,7 @@ export default function ShopGrid() {
       image: "/s-mart.jpg",
       address: "Kukatpally, Hyderabad",
       phone: "9012345678",
+      category: "groceries",
       products: [
         { name: "Rice Bag", price: 1200 },
         { name: "Cooking Oil", price: 250 },
@@ -43,6 +46,7 @@ export default function ShopGrid() {
       image: "/walnutz-house.jpg",
       address: "Gachibowli, Hyderabad",
       phone: "9345678123",
+      category: "meat",
       products: [
         { name: "Almonds Pack", price: 350 },
         { name: "Cashews Pack", price: 400 },
@@ -54,6 +58,7 @@ export default function ShopGrid() {
       image: "/biriyani-dukaan.jpg",
       address: "Charminar, Hyderabad",
       phone: "9456123789",
+      category: "food",
       products: [
         { name: "Chicken Biryani", price: 180 },
         { name: "Mutton Biryani", price: 220 },
@@ -65,6 +70,7 @@ export default function ShopGrid() {
       image: "/alan-krutha-restaurant.jpg",
       address: "Hitech City, Hyderabad",
       phone: "9567812340",
+      category: "restaurant",
       products: [
         { name: "Paneer Butter Masala", price: 200 },
         { name: "Veg Fried Rice", price: 160 },
@@ -72,6 +78,32 @@ export default function ShopGrid() {
       ]
     }
   ];
+
+  const query = search.toLowerCase();
+
+  const categoryMap = {
+    food: ["food", "restaurant"],
+    electronics: ["electronics", "gadgets"],
+    groceries: ["groceries", "fruits", "meat"]
+  };
+
+  const relatedCategories = categoryMap[query] || [];
+
+  const filteredShops = shops.filter((shop) => {
+
+    const shopCategory = shop.category.toLowerCase();
+
+    const categoryMatch =
+      shopCategory.includes(query) ||
+      relatedCategories.includes(shopCategory);
+
+    return (
+      shop.name.toLowerCase().includes(query) ||
+      categoryMatch ||
+      shop.address.toLowerCase().includes(query)
+    );
+
+  });
 
   return (
     <div className="max-w-7xl mx-auto py-16 px-6">
@@ -82,7 +114,7 @@ export default function ShopGrid() {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        {shops.map((shop, index) => (
+        {filteredShops.map((shop, index) => (
           <ShopCard key={index} shop={shop} />
         ))}
 

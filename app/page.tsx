@@ -1,17 +1,24 @@
-import Navbar from "../components/Navbar"
-import Hero from "../components/Hero"
-import Categories from "../components/Categories"
-import ShopGrid from "../components/ShopGrid"
-import SearchBar from "../components/SearchBar"
+"use client";
+
+import { useState } from "react";
+import Navbar from "../components/Navbar";
+import Categories from "../components/Categories";
+import ShopGrid from "../components/ShopGrid";
+import SearchBar from "../components/SearchBar";
 
 export default function Home() {
+
+  const [search, setSearch] = useState("");
+
   return (
     <>
       <Navbar />
-      <SearchBar />
-      {/* <Hero /> */}
+
+      <SearchBar onSearch={setSearch} />
+      
       <Categories />
-      <ShopGrid />
+
+      <ShopGrid search={search} />
     </>
   );
 }
