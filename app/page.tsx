@@ -10,12 +10,22 @@ const syne = Syne({
   weight: ['800'], 
 });
 
+type Shop = {
+  id: number;
+  name: string;
+  loc: string;
+  dist: string;
+  items: number;
+  img: string;
+  tags: string;
+};
+
 export default function Home() {
   const [view, setView] = useState("home"); 
-  const [selectedShop, setSelectedShop] = useState(null);
+  const [selectedShop, setSelectedShop] = useState<Shop | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const shops = [
+  const shops: Shop[] = [
     { id: 1, name: "Alankrutha Restaurant", loc: "Main Road", dist: "200m", items: 55, img: "/alankrutha Restaurant.jpg", tags: "food restaurant eating hotel dining meals lunch dinner non-veg veg" },
     { id: 2, name: "Biriyani Dukaan", loc: "Ramanthapur X Roads", dist: "450m", items: 32, img: "/biriyani Dukaan.jpg", tags: "food restaurant eating hotel biriyani rice spicy non-veg" },
     { id: 3, name: "Gadget Houz", loc: "Near TV Studio", dist: "1.1km", items: 124, img: "/gadget Houz.jpg", tags: "electronics mobile phone gadgets tech accessories laptop" },
