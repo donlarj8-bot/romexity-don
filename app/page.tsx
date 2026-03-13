@@ -18,6 +18,7 @@ type Shop = {
   items: number;
   img: string;
   tags: string;
+  description: string;
 };
 
 export default function Home() {
@@ -26,28 +27,318 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const shops: Shop[] = [
-    { id: 1, name: "Alankrutha Restaurant", loc: "Main Road", dist: "200m", items: 55, img: "/Alankrutha-Restaurant.jpg", tags: "food restaurant eating hotel dining meals lunch dinner non-veg veg" },
-    { id: 2, name: "Biriyani Dukaan", loc: "Ramanthapur X Roads", dist: "450m", items: 32, img: "/Biriyani-Dukaan.jpg", tags: "food restaurant eating hotel biriyani rice spicy non-veg" },
-    { id: 3, name: "Gadget Houz", loc: "Near TV Studio", dist: "1.1km", items: 124, img: "/Gadget-Houz.jpg", tags: "electronics mobile phone gadgets tech accessories laptop" },
-    { id: 4, name: "Guntur Gongoora", loc: "Beside Public School", dist: "700m", items: 40, img: "/Guntur-Gongoora.jpg", tags: "food restaurant eating hotel south indian spicy traditional meals" },
-    { id: 5, name: "Just For You", loc: "Church Lane", dist: "350m", items: 88, img: "/Just-For-You.png", tags: "fashion clothes apparel gifts shopping boutique" },
-    { id: 6, name: "Katragadda's Food Court", loc: "Metro Pillar 1502", dist: "1.4km", items: 62, img: "/Katragadda's-Food-Court.jpg", tags: "food restaurant eating hotel snacks tiffins street food" },
-    { id: 7, name: "KFC", loc: "Main Road", dist: "100m", items: 25, img: "/kfc.jpg", tags: "food restaurant eating hotel chicken burger fast food" },
-    { id: 8, name: "Lenskart", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/lenskart.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 9, name: "Waltnutz", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/Walnutz-House.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 10, name: "Belgian Waffle", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/belgian-waffle.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 11, name: "Bubble Recap", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/bubble-recap.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 12, name: "car-detailing-studio", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/car-detailing-studio.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 13, name: "Career Consultz", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/career-consultz.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 14, name: "Moto Vault", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/moto-vault.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 15, name: "Pawparazzi", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/pawparazzi.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 16, name: "Silver-Switch-&-Carat-Switch", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/silver-switch-&-carat-switch.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 17, name: "Swasa", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/swasa.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 18, name: "Viswasa", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/viswasa.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-    { id: 19, name: "Wow Momo", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/wow-momo.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
-
-    
-  ];
+  {
+    id: 1,
+    name: "Alankrutha Restaurant",
+    loc: "Main Road",
+    dist: "200m",
+    items: 55,
+    img: "/Alankrutha-Restaurant.jpg",
+    tags: "food restaurant eating hotel dining meals lunch dinner non-veg veg",
+    description: "Restaurant serving traditional South Indian meals and biriyani."
+  },
+  {
+    id: 2,
+    name: "Biriyani Dukaan",
+    loc: "Ramanthapur X Roads",
+    dist: "450m",
+    items: 32,
+    img: "/Biriyani-Dukaan.jpg",
+    tags: "food restaurant eating hotel biriyani rice spicy non-veg",
+    description: "Popular place for spicy biriyani and rice dishes."
+  },
+  {
+    id: 3,
+    name: "Gadget Houz",
+    loc: "Near TV Studio",
+    dist: "1.1km",
+    items: 124,
+    img: "/Gadget-Houz.jpg",
+    tags: "electronics mobile phone gadgets tech accessories laptop",
+    description: "Electronics store selling gadgets, mobiles, and accessories."
+  },
+  {
+    id: 4,
+    name: "Guntur Gongoora",
+    loc: "Beside Public School",
+    dist: "700m",
+    items: 40,
+    img: "/Guntur-Gongoora.jpg",
+    tags: "food restaurant eating hotel south indian spicy traditional meals",
+    description: "Traditional Andhra restaurant famous for spicy meals."
+  },
+  {
+    id: 5,
+    name: "Just For You",
+    loc: "Church Lane",
+    dist: "350m",
+    items: 88,
+    img: "/Just-For-You.png",
+    tags: "fashion clothes apparel gifts shopping boutique",
+    description: "Fashion boutique selling clothes and gift items."
+  },
+  {
+    id: 6,
+    name: "Katragadda's Food Court",
+    loc: "Metro Pillar 1502",
+    dist: "1.4km",
+    items: 62,
+    img: "/Katragadda's-Food-Court.jpg",
+    tags: "food restaurant eating hotel snacks tiffins street food",
+    description: "Food court offering snacks, tiffins, and street food."
+  },
+  {
+    id: 7,
+    name: "KFC",
+    loc: "Main Road",
+    dist: "100m",
+    items: 25,
+    img: "/kfc.jpg",
+    tags: "food restaurant eating hotel chicken burger fast food",
+    description: "Fast-food restaurant famous for fried chicken and burgers."
+  },
+  {
+    id: 8,
+    name: "Lenskart",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/lenskart.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Eyewear store selling glasses, frames, and sunglasses."
+  },
+  {
+    id: 9,
+    name: "Waltnutz",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/Walnutz-House.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Cafe known for desserts and sweet treats."
+  },
+  {
+    id: 10,
+    name: "Belgian Waffle",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/belgian-waffle.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Dessert shop specializing in Belgian waffles."
+  },
+  {
+    id: 11,
+    name: "Bubble Recap",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/bubble-recap.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Bubble tea shop offering flavored drinks."
+  },
+  {
+    id: 12,
+    name: "Car Detailing Studio",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/car-detailing-studio.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Car detailing service for cleaning and polishing vehicles."
+  },
+  {
+    id: 13,
+    name: "Career Consultz",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/career-consultz.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Consulting center helping students with career guidance."
+  },
+  {
+    id: 14,
+    name: "Moto Vault",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/moto-vault.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Motorcycle accessories and gear store."
+  },
+  {
+    id: 15,
+    name: "Pawparazzi",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/pawparazzi.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Pet grooming and accessories shop."
+  },
+  {
+    id: 16,
+    name: "Silver Switch & Carat Switch",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/silver-switch-&-carat-switch.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Jewellery store selling silver and gold items."
+  },
+  {
+    id: 17,
+    name: "Swasa",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/swasa.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Wellness center offering health and lifestyle services."
+  },
+  {
+    id: 18,
+    name: "Viswasa",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/viswasa.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Local health and wellness service provider."
+  },
+  {
+    id: 19,
+    name: "Wow Momo",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/wow-momo.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 20,
+    name: "Abc Salon Unisex",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/abc-salon-unisex.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 21,
+    name: "Crystal Vision Eye Care Centre",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/crystal-vision-eye-care-centre.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 22,
+    name: "Elite Hotel Hitech",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/elite-hotel-hitech.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 23,
+    name: "Imfs Abroad Partner",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/imfs-abroad-partner.png",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 24,
+    name: "Global Fashions",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/global-fashions.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 25,
+    name: "Madhapur Bawarchi",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/madhapur-bawarchi.png",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 26,
+    name: "Pralines & Cream",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/pralines-&-cream.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 27,
+    name: "Sampoorna Retailing",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/sampoorna-retailing.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 28,
+    name: "Sis Group Enterprises",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/sis-group-enterprises.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 29,
+    name: "Skt Gold & Diamonds",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/skt-gold-&-diamonds.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 30,
+    name: "Srinidha Food Court",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/srinidha-food-court.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  {
+    id: 31,
+    name: "Zamindar Restaurant",
+    loc: "Opp. More Supermarket",
+    dist: "900m",
+    items: 215,
+    img: "/zamindar-restaurant.jpg",
+    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
+    description: "Fast-food chain specializing in momos and quick snacks."
+  },
+  
+];
 
   const categories = [
     { name: 'Shoes', icon: '👟' },

@@ -20,7 +20,10 @@ export default function ShopCard({ shop, setSelectedShop, setView }) {
       </div>
       <div>
         <h3 className="font-bold text-sm text-gray-900">{shop.name}</h3>
-        <p className="text-gray-500 text-[11px] font-medium">{shop.loc} • {shop.dist}</p>
+        <p className="text-[14px] text-gray-500 mt-0.5 line-clamp-1">
+  {shop.description}
+</p>
+      
         <p className="text-[11px] mt-1 font-bold text-black">{shop.items} items listed</p>
       </div>
     </div>
