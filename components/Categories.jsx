@@ -1,45 +1,18 @@
-"use client";
+import React from 'react';
 
-export default function Categories() {
-
-  const categories = [
-    "🍎 Fruits",
-    "👕 Clothes",
-    "💻 Electronics",
-    "📚 Books",
-    "🛒 Groceries",
-    "🥩 Meat",
-    "🍕 Food",
-    "🎧 Gadgets"
-  ];
-
+export default function Categories({ categories, setSearchTerm }) {
   return (
-    <section className="py-6">
-
-      <div className="max-w-7xl mx-auto px-4">
-
-        {/* Horizontal Line */}
-        <hr className="border-t border-gray-300 my-3" />
-
-        {/* Centered Categories */}
-        <div className="flex flex-wrap justify-center gap-4">
-
-          {categories.map((cat, index) => (
-            <button
-              key={index}
-              className="px-6 py-2 border border-gray-400 rounded-full shadow-md"
-            >
-              {cat}
-            </button>
-          ))}
-
+    <section className="flex items-center gap-12 overflow-x-auto pb-6 no-scrollbar border-b border-gray-100">
+      {categories.map((cat) => (
+        <div 
+          key={cat.name} 
+          onClick={() => setSearchTerm(cat.name)}
+          className="flex flex-col items-center gap-2 cursor-pointer opacity-70 hover:opacity-100 transition-all min-w-fit border-b-2 border-transparent hover:border-black pb-2"
+        >
+          <span className="text-2xl">{cat.icon}</span>
+          <span className="text-xs font-semibold uppercase tracking-wide">{cat.name}</span>
         </div>
-
-        {/* Bottom Horizontal Line */}
-        <hr className="border-t border-gray-300 my-3" />
-
-      </div>
-
+      ))}
     </section>
   );
 }

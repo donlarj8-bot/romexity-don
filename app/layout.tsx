@@ -1,34 +1,18 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-variable: "--font-geist-sans",
-subsets: ["latin"],
-display: "swap",
-});
-
-const geistMono = Geist_Mono({
-variable: "--font-geist-mono",
-subsets: ["latin"],
-display: "swap",
-});
-
-export const metadata: Metadata = {
-title: "RomeXity",
-description: "Explore local stores and shops near you",
+export const metadata = {
+  title: "RomeXity",
+  description: "Luxury Redefined",
 };
 
 export default function RootLayout({
-children,
+  children,
 }: {
-children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-return ( <html lang="en">
-<body
-className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white min-h-screen`}
-style={{ margin: 0 }}
->
-{children} </body> </html>
-);
+  return (
+    <html lang="en">
+      <body className="antialiased">{children}</body>
+    </html>
+  );
 }
