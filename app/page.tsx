@@ -35,6 +35,18 @@ export default function Home() {
     { id: 7, name: "KFC", loc: "Main Road", dist: "100m", items: 25, img: "/kfc.jpg", tags: "food restaurant eating hotel chicken burger fast food" },
     { id: 8, name: "Lenskart", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/lenskart.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
     { id: 9, name: "Waltnutz", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/Walnutz-House.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 10, name: "Belgian Waffle", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/belgian-waffle.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 11, name: "Bubble Recap", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/bubble-recap.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 12, name: "car-detailing-studio", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/car-detailing-studio.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 13, name: "Career Consultz", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/career-consultz.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 14, name: "Moto Vault", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/moto-vault.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 15, name: "Pawparazzi", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/pawparazzi.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 16, name: "Silver-Switch-&-Carat-Switch", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/silver-switch-&-carat-switch.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 17, name: "Swasa", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/swasa.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 18, name: "Viswasa", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/viswasa.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 19, name: "Wow Momo", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/wow-momo.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+
+    
   ];
 
   const categories = [
