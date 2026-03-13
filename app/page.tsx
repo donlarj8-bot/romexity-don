@@ -32,8 +32,8 @@ export default function Home() {
     { id: 4, name: "Guntur Gongoora", loc: "Beside Public School", dist: "700m", items: 40, img: "/Guntur Gongoora.jpg", tags: "food restaurant eating hotel south indian spicy traditional meals" },
     { id: 5, name: "Just For You", loc: "Church Lane", dist: "350m", items: 88, img: "/Just For You.png", tags: "fashion clothes apparel gifts shopping boutique" },
     { id: 6, name: "Katragadda's Food Court", loc: "Metro Pillar 1502", dist: "1.4km", items: 62, img: "/Katragadda's Food Court.jpg", tags: "food restaurant eating hotel snacks tiffins street food" },
-    { id: 7, name: "KFC", loc: "Main Road", dist: "100m", items: 25, img: "/KFC.jpg", tags: "food restaurant eating hotel chicken burger fast food" },
-    { id: 8, name: "Lenskart", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/Lenskart.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
+    { id: 7, name: "KFC", loc: "Main Road", dist: "100m", items: 25, img: "/kfc.jpg", tags: "food restaurant eating hotel chicken burger fast food" },
+    { id: 8, name: "Lenskart", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/lenskart.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
     { id: 9, name: "Waltnutz", loc: "Opp. More Supermarket", dist: "900m", items: 215, img: "/Walnutz House.jpg", tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic" },
   ];
 
