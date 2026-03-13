@@ -9,7 +9,10 @@ export default function SearchBar({ onSearch, scrolled }) {
   const handleChange = (e) => {
     const text = e.target.value;
     setValue(text);
-    onSearch(text);
+
+    if (onSearch) {
+      onSearch(text);
+    }
   };
 
   if (scrolled) return null;
@@ -17,7 +20,7 @@ export default function SearchBar({ onSearch, scrolled }) {
   return (
     <div className="pt-32 pb-6 flex justify-center">
 
-      <div className="flex gap-3">
+      <div className="flex gap-3 relative">
 
         <input
           type="text"
@@ -27,9 +30,10 @@ export default function SearchBar({ onSearch, scrolled }) {
           className="w-80 md:w-[420px] px-5 py-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-gray-400"
         />
 
-        <button className="bg-gray-800 text-white px-6 py-3 rounded-full hover:bg-gray-700">
-          Search
-        </button>
+        {/* Search Icon */}
+        <div className="absolute right-2 top-1/2 -translate-y-1/2 bg-sky-500 text-white px-3 py-2 rounded-full z-10">
+          🔍
+        </div>
 
       </div>
 
