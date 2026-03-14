@@ -3,26 +3,62 @@ import SearchBar from './SearchBar';
 
 export default function Navbar({ setView, searchTerm, setSearchTerm, syneClass }) {
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-100 px-6 py-4">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+   <header className="sticky top-0 z-50 bg-white md:border-b border-gray-100 px-2 md:px-10 py-2 md:py-5">
+
+      {/* ---------------- LAPTOP VIEW (UNCHANGED) ---------------- */}
+      <div className="hidden md:flex max-w-7xl mx-auto items-center justify-between">
         
         {/* Logo Section */}
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => setView("home")}>
-          <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-black text-xs">
+          <div className="w-10 h-10 md:w-14 md:h-14 bg-blue-600 rounded-full flex items-center justify-center text-white font-black text-xs md:text-base">
             RX
           </div>
-          <div className={`${syneClass} text-2xl tracking-tighter text-blue-600`}>
+
+          <div className={`${syneClass} text-sm md:text-2xl tracking-tighter text-blue-600 font-bold`}>
             RomeXity
           </div>
         </div>
-        
+
         <SearchBar searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
 
         <div className="flex items-center gap-4">
-          <button className="text-sm font-medium px-4 py-2 hover:bg-gray-50 rounded-full text-gray-600">List your shop</button>
-          <div className="w-10 h-10 bg-gray-900 rounded-full flex items-center justify-center text-white text-xs font-bold">RX</div>
+         <button className="text-sm md:text-lg font-medium px-4 md:px-6 py-2 md:py-3 hover:bg-gray-50 rounded-full text-gray-600">
+            List your shop
+          </button>
+
+          <div className="w-10 h-10 md:w-14 md:h-14 bg-gray-900 rounded-full flex items-center justify-center text-white text-xs md:text-base font-bold">
+            RX
+          </div>
         </div>
+
       </div>
+
+
+      {/* ---------------- MOBILE VIEW ---------------- */}
+      <div className="md:hidden max-w-7xl mx-auto">
+
+        {/* Logo */}
+        <div className="flex justify-start px-2">
+          <div
+            className={`${syneClass} text-lg tracking-tighter text-blue-600 cursor-pointer`}
+            onClick={() => setView("home")}
+          >
+            RomeXity
+          </div>
+        </div>
+
+        {/* Search */}
+        <div className="mt-1 mb-[5px] flex justify-center">
+          <SearchBar
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+          />
+        </div>
+
+        
+
+      </div>
+
     </header>
   );
 }

@@ -368,7 +368,7 @@ export default function Home() {
         syneClass={syne.className} 
       />
 
-      <main className="max-w-7xl mx-auto px-6 pt-12">
+      <main className="max-w-7xl mx-auto px-4 md:px-6 pt-8 md:pt-12">
         
         {view === "home" && (
           <>
