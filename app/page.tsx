@@ -27,8 +27,108 @@ export default function Home() {
   const [searchTerm, setSearchTerm] = useState("");
 
   const shops: Shop[] = [
+ {
+  id: 1,
+  name: "Big Byte Cafe",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/big-byte-cafe.jpg",
+  tags: "cafe coffee snacks beverages fastfood sandwiches burgers drinks hangout",
+  description: "Cozy cafe serving coffee snacks beverages"
+},
+{
+  id: 2,
+  name: "Godavari Cuts",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/godavari-cuts.jpg",
+  tags: "non-veg chicken mutton meat shop fresh meat butcher seafood",
+  description: "Fresh nonveg chicken mutton meat shop"
+},
+{
+  id: 3,
+  name: "Helmet World",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/helmet-world.jpg",
+  tags: "helmet bike helmet riding safety gear motorcycle accessories",
+  description: "Quality motorcycle helmets and riding accessories"
+},
+{
+  id: 4,
+  name: "Kaira",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/kaira.jpg",
+  tags: "women clothing sarees dresses ethnic wear fashion boutique ladies wear",
+  description: "Elegant womens sarees dresses fashion collection"
+},
+{
+  id: 5,
+  name: "Roman Island",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/roman-island.jpg",
+  tags: "men clothing shirts pants fashion menswear casual formal outfits",
+  description: "Trendy mens clothing shirts pants fashion"
+},
+{
+  id: 6,
+  name: "Shoe Khazana",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/shoe-khazana.jpg",
+  tags: "shoes footwear sneakers sandals formal shoes casual shoes",
+  description: "Wide variety shoes sandals sneakers footwear"
+},
+{
+  id: 7,
+  name: "Sweets Dude",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/sweets-dude.png",
+  tags: "sweets bakery desserts mithai cakes pastries snacks",
+  description: "Delicious sweets desserts cakes bakery items"
+},
+{
+  id: 8,
+  name: "Taaja Kichen",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/taaja-kichen.jpg",
+  tags: "restaurant food meals lunch dinner biriyani veg nonveg dining",
+  description: "Fresh restaurant meals veg nonveg biriyani"
+},
+{
+  id: 9,
+  name: "The Arvind Store",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/the-arvind-store.jpg",
+  tags: "clothing shirts pants fashion menswear formal casual garments",
+  description: "Branded clothing store shirts pants fashion"
+},
+{
+  id: 10,
+  name: "The Vogue salon",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/the-vogue-salon.jpg",
+  tags: "salon beauty haircut hair styling grooming spa makeup skincare",
+  description: "Professional salon hair beauty grooming services"
+},
   {
-    id: 1,
+    id: 11,
     name: "Alankrutha Restaurant",
     loc: "Main Road",
     dist: "200m",
@@ -38,7 +138,7 @@ export default function Home() {
     description: "Restaurant serving traditional South Indian meals and biriyani."
   },
   {
-    id: 2,
+    id: 12,
     name: "Biriyani Dukaan",
     loc: "Ramanthapur X Roads",
     dist: "450m",
@@ -48,7 +148,7 @@ export default function Home() {
     description: "Popular place for spicy biriyani and rice dishes."
   },
   {
-    id: 3,
+    id: 13,
     name: "Gadget Houz",
     loc: "Near TV Studio",
     dist: "1.1km",
@@ -58,7 +158,7 @@ export default function Home() {
     description: "Electronics store selling gadgets, mobiles, and accessories."
   },
   {
-    id: 4,
+    id: 14,
     name: "Guntur Gongoora",
     loc: "Beside Public School",
     dist: "700m",
@@ -68,7 +168,7 @@ export default function Home() {
     description: "Traditional Andhra restaurant famous for spicy meals."
   },
   {
-    id: 5,
+    id: 15,
     name: "Just For You",
     loc: "Church Lane",
     dist: "350m",
@@ -78,7 +178,7 @@ export default function Home() {
     description: "Fashion boutique selling clothes and gift items."
   },
   {
-    id: 6,
+    id: 16,
     name: "Katragadda's Food Court",
     loc: "Metro Pillar 1502",
     dist: "1.4km",
@@ -88,7 +188,7 @@ export default function Home() {
     description: "Food court offering snacks, tiffins, and street food."
   },
   {
-    id: 7,
+    id: 17,
     name: "KFC",
     loc: "Main Road",
     dist: "100m",
@@ -98,7 +198,7 @@ export default function Home() {
     description: "Fast-food restaurant famous for fried chicken and burgers."
   },
   {
-    id: 8,
+    id: 18,
     name: "Lenskart",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -108,7 +208,7 @@ export default function Home() {
     description: "Eyewear store selling glasses, frames, and sunglasses."
   },
   {
-    id: 9,
+    id: 19,
     name: "Waltnutz",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -118,7 +218,7 @@ export default function Home() {
     description: "Cafe known for desserts and sweet treats."
   },
   {
-    id: 10,
+    id: 20,
     name: "Belgian Waffle",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -128,7 +228,7 @@ export default function Home() {
     description: "Dessert shop specializing in Belgian waffles."
   },
   {
-    id: 11,
+    id: 21,
     name: "Bubble Recap",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -138,7 +238,7 @@ export default function Home() {
     description: "Bubble tea shop offering flavored drinks."
   },
   {
-    id: 12,
+    id: 22,
     name: "Car Detailing Studio",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -148,7 +248,7 @@ export default function Home() {
     description: "Car detailing service for cleaning and polishing vehicles."
   },
   {
-    id: 13,
+    id: 23,
     name: "Career Consultz",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -158,7 +258,7 @@ export default function Home() {
     description: "Consulting center helping students with career guidance."
   },
   {
-    id: 14,
+    id: 24,
     name: "Moto Vault",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -168,7 +268,7 @@ export default function Home() {
     description: "Motorcycle accessories and gear store."
   },
   {
-    id: 15,
+    id: 25,
     name: "Pawparazzi",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -178,7 +278,7 @@ export default function Home() {
     description: "Pet grooming and accessories shop."
   },
   {
-    id: 16,
+    id: 26,
     name: "Silver Switch & Carat Switch",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -188,7 +288,7 @@ export default function Home() {
     description: "Jewellery store selling silver and gold items."
   },
   {
-    id: 17,
+    id: 27,
     name: "Swasa",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -198,7 +298,7 @@ export default function Home() {
     description: "Wellness center offering health and lifestyle services."
   },
   {
-    id: 18,
+    id: 28,
     name: "Viswasa",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -208,7 +308,7 @@ export default function Home() {
     description: "Local health and wellness service provider."
   },
   {
-    id: 19,
+    id: 29,
     name: "Wow Momo",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -218,7 +318,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 20,
+    id: 30,
     name: "Abc Salon Unisex",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -228,7 +328,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 21,
+    id: 31,
     name: "Crystal Vision Eye Care Centre",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -238,7 +338,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 22,
+    id: 32,
     name: "Elite Hotel Hitech",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -248,7 +348,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 23,
+    id: 33,
     name: "Imfs Abroad Partner",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -258,7 +358,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 24,
+    id: 34,
     name: "Global Fashions",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -268,7 +368,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 25,
+    id: 35,
     name: "Madhapur Bawarchi",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -278,7 +378,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 26,
+    id: 36,
     name: "Pralines & Cream",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -288,7 +388,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 27,
+    id: 37,
     name: "Sampoorna Retailing",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -298,7 +398,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 28,
+    id: 38,
     name: "Sis Group Enterprises",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -308,7 +408,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 29,
+    id: 39,
     name: "Skt Gold & Diamonds",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -318,7 +418,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 30,
+    id: 40,
     name: "Srinidha Food Court",
     loc: "Opp. More Supermarket",
     dist: "900m",
@@ -328,7 +428,7 @@ export default function Home() {
     description: "Fast-food chain specializing in momos and quick snacks."
   },
   {
-    id: 31,
+    id: 41,
     name: "Zamindar Restaurant",
     loc: "Opp. More Supermarket",
     dist: "900m",
