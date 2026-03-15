@@ -54,9 +54,9 @@ export default function Home() {
   dist: "200m",
   items: 55,
   img: "/helmet-world.jpg",
-  tags: "helmet bike helmet riding safety gear motorcycle accessories",
+  tags: "helmet bikes bike helmet riding safety gear motorcycle accessories",
   description: "Quality motorcycle helmets and riding accessories"
-},
+}, 
 {
   id: 4,
   name: "Kaira",
@@ -127,316 +127,347 @@ export default function Home() {
   tags: "salon beauty haircut hair styling grooming spa makeup skincare",
   description: "Professional salon hair beauty grooming services"
 },
-  {
-    id: 11,
-    name: "Alankrutha Restaurant",
-    loc: "Main Road",
-    dist: "200m",
-    items: 55,
-    img: "/Alankrutha-Restaurant.jpg",
-    tags: "food restaurant eating hotel dining meals lunch dinner non-veg veg",
-    description: "Restaurant serving traditional South Indian meals and biriyani."
-  },
-  {
-    id: 12,
-    name: "Biriyani Dukaan",
-    loc: "Ramanthapur X Roads",
-    dist: "450m",
-    items: 32,
-    img: "/Biriyani-Dukaan.jpg",
-    tags: "food restaurant eating hotel biriyani rice spicy non-veg",
-    description: "Popular place for spicy biriyani and rice dishes."
-  },
-  {
-    id: 13,
-    name: "Gadget Houz",
-    loc: "Near TV Studio",
-    dist: "1.1km",
-    items: 124,
-    img: "/Gadget-Houz.jpg",
-    tags: "electronics mobile phone gadgets tech accessories laptop",
-    description: "Electronics store selling gadgets, mobiles, and accessories."
-  },
-  {
-    id: 14,
-    name: "Guntur Gongoora",
-    loc: "Beside Public School",
-    dist: "700m",
-    items: 40,
-    img: "/Guntur-Gongoora.jpg",
-    tags: "food restaurant eating hotel south indian spicy traditional meals",
-    description: "Traditional Andhra restaurant famous for spicy meals."
-  },
-  {
-    id: 15,
-    name: "Just For You",
-    loc: "Church Lane",
-    dist: "350m",
-    items: 88,
-    img: "/Just-For-You.png",
-    tags: "fashion clothes apparel gifts shopping boutique",
-    description: "Fashion boutique selling clothes and gift items."
-  },
-  {
-    id: 16,
-    name: "Katragadda's Food Court",
-    loc: "Metro Pillar 1502",
-    dist: "1.4km",
-    items: 62,
-    img: "/Katragadda's-Food-Court.jpg",
-    tags: "food restaurant eating hotel snacks tiffins street food",
-    description: "Food court offering snacks, tiffins, and street food."
-  },
-  {
-    id: 17,
-    name: "KFC",
-    loc: "Main Road",
-    dist: "100m",
-    items: 25,
-    img: "/kfc.jpg",
-    tags: "food restaurant eating hotel chicken burger fast food",
-    description: "Fast-food restaurant famous for fried chicken and burgers."
-  },
-  {
-    id: 18,
-    name: "Lenskart",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/lenskart.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Eyewear store selling glasses, frames, and sunglasses."
-  },
-  {
-    id: 19,
-    name: "Waltnutz",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/Walnutz-House.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Cafe known for desserts and sweet treats."
-  },
-  {
-    id: 20,
-    name: "Belgian Waffle",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/belgian-waffle.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Dessert shop specializing in Belgian waffles."
-  },
-  {
-    id: 21,
-    name: "Bubble Recap",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/bubble-recap.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Bubble tea shop offering flavored drinks."
-  },
-  {
-    id: 22,
-    name: "Car Detailing Studio",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/car-detailing-studio.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Car detailing service for cleaning and polishing vehicles."
-  },
-  {
-    id: 23,
-    name: "Career Consultz",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/career-consultz.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Consulting center helping students with career guidance."
-  },
-  {
-    id: 24,
-    name: "Moto Vault",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/moto-vault.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Motorcycle accessories and gear store."
-  },
-  {
-    id: 25,
-    name: "Pawparazzi",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/pawparazzi.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Pet grooming and accessories shop."
-  },
-  {
-    id: 26,
-    name: "Silver Switch & Carat Switch",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/silver-switch-&-carat-switch.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Jewellery store selling silver and gold items."
-  },
-  {
-    id: 27,
-    name: "Swasa",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/swasa.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Wellness center offering health and lifestyle services."
-  },
-  {
-    id: 28,
-    name: "Viswasa",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/viswasa.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Local health and wellness service provider."
-  },
-  {
-    id: 29,
-    name: "Wow Momo",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/wow-momo.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 30,
-    name: "Abc Salon Unisex",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/abc-salon-unisex.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 31,
-    name: "Crystal Vision Eye Care Centre",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/crystal-vision-eye-care-centre.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 32,
-    name: "Elite Hotel Hitech",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/elite-hotel-hitech.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 33,
-    name: "Imfs Abroad Partner",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/imfs-abroad-partner.png",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 34,
-    name: "Global Fashions",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/global-fashions.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 35,
-    name: "Madhapur Bawarchi",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/madhapur-bawarchi.png",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 36,
-    name: "Pralines & Cream",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/pralines-&-cream.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 37,
-    name: "Sampoorna Retailing",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/sampoorna-retailing.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 38,
-    name: "Sis Group Enterprises",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/sis-group-enterprises.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 39,
-    name: "Skt Gold & Diamonds",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/skt-gold-&-diamonds.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 40,
-    name: "Srinidha Food Court",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/srinidha-food-court.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
-  {
-    id: 41,
-    name: "Zamindar Restaurant",
-    loc: "Opp. More Supermarket",
-    dist: "900m",
-    items: 215,
-    img: "/zamindar-restaurant.jpg",
-    tags: "fashion glasses frames sunglasses lens eyewear specs eye clinic",
-    description: "Fast-food chain specializing in momos and quick snacks."
-  },
+{
+  id: 11,
+  name: "Accord",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/accord.jpg",
+  tags: " watches watch store wrist watch luxury watch accessories repair",
+  description: "Premium wrist watches and accessories store"
+},
+{
+  id: 12,
+  name: "Beal Tree Hotel",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/bael-tree-hotel.jpg",
+  tags: "hotel rooms stay lodging accommodation travel",
+  description: "Comfortable hotel rooms with quality service"
+},
+{
+  id: 13,
+  name: "Cheat Clean",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/cheat-clean.jpg",
+  tags: "cafe coffee desserts snacks beverages sweet",
+  description: "Cafe serving desserts coffee and snacks"
+},
+{
+  id: 14,
+  name: "D style",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/d-style.png",
+  tags: "mens fashion clothing shirts jeans apparel",
+  description: "Trendy mens fashion clothing and accessories"
+},
+{
+  id: 15,
+  name: "Dharvaad Mishra pedaa",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/dharvaad-mishra-pedaa.jpg",
+  tags: "sweets peda dessert indian sweets shop",
+  description: "Famous Dharwad peda traditional sweet shop"
+},
+{
+  id: 16,
+  name: "Dhobhi Wala",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/dhobhiwala.jpg",
+  tags: "laundry dryclean washing ironing clothes cleaning",
+  description: "Laundry and professional dry cleaning services"
+},
+{
+  id: 17,
+  name: "Dollars Men's saloon",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/dollars-mens-saloon.jpg",
+  tags: "mens salon haircut beard grooming styling",
+  description: "Mens salon haircut grooming styling services"
+},
+{
+  id: 18,
+  name: "Food Paradise",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/food-paradise.png",
+  tags: "restaurant food meals fastfood snacks dining",
+  description: "Restaurant serving variety of delicious foods"
+},
+{
+  id: 19,
+  name: "Go Colors",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/go-colors.jpg",
+  tags: "womens clothing leggings fashion apparel store",
+  description: "Women's leggings and fashion clothing store"
+},
+{
+  id: 20,
+  name: "Habiller",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/Habiller.jpg",
+  tags: "fashion clothing men women apparel boutique",
+  description: "Stylish clothing store for men women"
+},
+{
+  id: 21,
+  name: "Heal Fitness Centre",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/heal-fitness-centre.jpg",
+  tags: "gym fitness workout training health unisex",
+  description: "Unisex gym fitness training and workouts"
+},
+{
+  id: 22,
+  name: "Hotel Horizon",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/hotel-horizon.jpg",
+  tags: "luxury hotel rooms accommodation stay travel",
+  description: "Luxurious hotel stay with modern amenities"
+},
+{
+  id: 23,
+  name: "Irani Chai",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/irani-chai.jpg",
+  tags: "chai tea snacks cafe beverages irani",
+  description: "Popular chai center serving tea snacks"
+},
+{
+  id: 24,
+  name: "Jaya Shree Balaji Stationary",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/jayashreebalaji-stationary&sports-gifts & decoration.png",
+  tags: "stationery sports gifts decorations school supplies",
+  description: "Stationery sports gifts and decorations shop"
+},
+{
+  id: 25,
+  name: "King Mandi",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/kings-mandi.jpg",
+  tags: "mandi biryani restaurant arabic food dining",
+  description: "Arabic mandi restaurant serving delicious meals"
+},
+{
+  id: 26,
+  name: "Komala Mess",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/komala-mess.jpg",
+  tags: "restaurant tiffins meals dosa pulao chinese",
+  description: "Restaurant serving tiffins meals and pulaos"
+},
+{
+  id: 27,
+  name: "Legacy Multi Speciality Hospital",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/legcy-multi-speciality-hospital.jpg",
+  tags: "hospital healthcare doctors medical treatment emergency",
+  description: "Multi speciality hospital with advanced care"
+},
+{
+  id: 28,
+  name: "Lenscraft",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/lenscraft.jpg",
+  tags: "optical glasses spectacles lenses eyewear vision",
+  description: "Optical store for glasses lenses eyewear"
+},
+{
+  id: 29,
+  name: "Louis Philippe",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/louis-philippe.jpg",
+  tags: "mens clothing formal shirts fashion apparel",
+  description: "Premium mens formal clothing fashion store"
+},
+{
+  id: 30,
+  name: "Manikanta's LiveSmart Womens Hostel",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/manikanta's-livesmart-womens-hostel.jpg",
+  tags: "womens hostel accommodation rooms stay lodging",
+  description: "Safe womens hostel with comfortable accommodation"
+},
+{
+  id: 31,
+  name: "Mercely's Icecream",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/mercely's-icecream.jpg",
+  tags: "icecream desserts scoops cones sweets",
+  description: "Delicious icecream scoops cones and desserts"
+},
+{
+  id: 32,
+  name: "One More Cup",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/one-more-cup.jpg",
+  tags: "tea coffee beverages shawarma snacks cafe",
+  description: "Tea coffee beverages and shawarma cafe"
+},
+{
+  id: 33,
+  name: "Orange Hotels",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/orange-hotels.jpg",
+  tags: "hotel ac rooms stay accommodation lodging",
+  description: "AC and non AC hotel rooms"
+},
+{
+  id: 34,
+  name: "Organic Creamery",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/organic-creamery.jpg",
+  tags: "organic icecream desserts natural dairy sweets",
+  description: "India organic natural icecream dessert store"
+},
+{
+  id: 35,
+  name: "Palamuru Grill",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/palamuru-grill.jpg",
+  tags: "restaurant grill food meals dining",
+  description: "Restaurant serving grilled foods and meals"
+},
+{
+  id: 36,
+  name: "Ratnadeep",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/ratnadeep.jpg",
+  tags: "supermarket groceries retail shopping store",
+  description: "Popular supermarket retailing groceries since 1997"
+},
+{
+  id: 37,
+  name: "Rayalaseema spice",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/rayalaseema-spice.jpg",
+  tags: "family restaurant spicy food meals dining",
+  description: "Rayalaseema family restaurant serving spicy food"
+},
+{
+  id: 38,
+  name: "Re Bullet Zone",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/Re-bullet-zone.jpg",
+  tags: "bikes bike service royal enfield repair workshop",
+  description: "Royal Enfield bike service repair centre"
+},
+{
+  id: 39,
+  name: "Siddru Bakers",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/siddru-bakers.png",
+  tags: "bakery cakes cookies pastries snacks sweets",
+  description: "Bakery selling cakes cookies pastries snacks"
+},
+{
+  id: 40,
+  name: "Sripala Unisex Salon",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/sripala-unisex-salon.jpg",
+  tags: "unisex salon haircut beauty grooming spa",
+  description: "Unisex salon beauty hair grooming services"
+},
+{
+  id: 41,
+  name: "Style On Studio",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/style-on-studio.jpg",
+  tags: "mens salon haircut grooming beard styling",
+  description: "Mens salon haircut grooming styling studio"
+},
+{
+  id: 42,
+  name: "Whites",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/whites.jpg",
+  tags: "laundry dryclean saree polish petrol wash",
+  description: "Laundry dryclean saree polish petrol wash"
+},
+{
+  id: 43,
+  name: "Zeus MotorCycle Gear",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/zeus-motorcycle-gear.jpg",
+  tags: "motorcycle gear jackets gloves riding accessories",
+  description: "Motorcycle riding gear jackets gloves accessories"
+},
+{
+  id: 44,
+  name: "Siva Men's Saloon",
+  loc: "Main Road",
+  dist: "200m",
+  items: 55,
+  img: "/siva-mens-saloon.png",
+  tags: "mens salon haircut beard grooming styling",
+  description: "Mens salon haircut grooming styling services"
+}
+  
   
 ];
 
