@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Syne } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import ShopGrid from '@/components/ShopGrid';
-// FIXED PATH: Pointing to the root sanity folder
-// We added "/app" to the path because that's where the folder is now
+
 import { client } from '@/sanity/lib/client';
 
 const syne = Syne({ 
