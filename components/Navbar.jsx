@@ -48,7 +48,7 @@ export default function Navbar({ setView, searchTerm, setSearchTerm, syneClass }
         </div>
 
         {/* Search */}
-        <div className="mt-1 mb-[5px] flex justify-center">
+        <div className="mt-1 mb-[5px] flex justify-start px-2">
           <SearchBar
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}

@@ -2,14 +2,14 @@ import React from 'react';
 
 export default function SearchBar({ searchTerm, setSearchTerm }) {
   return (
-    <div className="w-[90%] md:w-[700px] max-w-3xl">
-      <div className="flex flex-nowrap items-center bg-white border border-gray-200 rounded-full py-2 md:py-3 px-3 md:px-4 shadow-xl">
+    <div className="w-full md:w-[700px] max-w-3xl">
+      <div className="flex flex-nowrap items-center bg-white border border-gray-200 rounded-full py-3 md:py-3 px-3 md:px-4 shadow-xl">
 
         {/* Input */}
         <input
           type="text"
           placeholder="Search 'hotel', 'biriyani'..."
-          className="flex-1 min-w-0 bg-transparent outline-none text-sm text-gray-700 px-2 md:px-4"
+          className="flex-1 min-w-0 bg-transparent outline-none text-sm text-gray-700 pl-1 md:px-4"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
