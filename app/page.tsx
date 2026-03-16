@@ -3,8 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Syne } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import ShopGrid from '@/components/ShopGrid';
-
-import { client } from '@/sanity/lib/client';
+import { client } from '@/sanity/lib/client'; 
 
 const syne = Syne({ 
   subsets: ['latin'],
