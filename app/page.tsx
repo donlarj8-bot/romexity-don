@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Syne } from 'next/font/google';
 import Navbar from '@/components/Navbar';
-import Categories from '@/components/Categories';
+// import Categories from '@/components/Categories';
 import ShopGrid from '@/components/ShopGrid';
 
 const syne = Syne({ 
@@ -499,14 +499,14 @@ export default function Home() {
         syneClass={syne.className} 
       />
 
-      <main className="max-w-7xl mx-auto px-4 md:px-6 pt-8 md:pt-12">
+      <main className="max-w-7xl mx-auto px-4 md:px-6 pt-[1px] md:pt-[1px]">
         
         {view === "home" && (
           <>
-            <Categories 
+            {/* <Categories 
               categories={categories} 
               setSearchTerm={setSearchTerm} 
-            />
+            /> */}
 
             <ShopGrid 
               filteredShops={filteredShops} 
