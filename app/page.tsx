@@ -129,7 +129,7 @@ export default function Home() {
             ) : (
               <ShopGrid 
                 filteredShops={filteredShops} 
-                setSelectedShop={(shop) => handleOpenShop(shop as Shop)} 
+                setSelectedShop={(shop: Shop) => handleOpenShop(shop)} 
                 setView={() => {}} 
               />
             )}
