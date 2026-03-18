@@ -49,10 +49,12 @@ export default function Home() {
   }, []);
 
   const filteredShops = shops.filter(shop => {
-    const searchLower = searchTerm.toLowerCase();
+    const searchWords = searchTerm.toLowerCase().trim().split(/\s+/);
     const shopName = shop.name?.toLowerCase() || "";
     const shopTags = shop.tags?.toLowerCase() || "";
-    return shopName.includes(searchLower) || shopTags.includes(searchLower);
+    const combinedContent = `${shopName} ${shopTags}`;
+    
+    return searchWords.every(word => combinedContent.includes(word));
   });
 
   return (
