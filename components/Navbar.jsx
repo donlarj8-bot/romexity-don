@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 
 export default function Navbar({ setView, searchTerm, setSearchTerm, syneClass }) {
   return (
-   <header className="sticky top-0 z-50 bg-white md:border-b border-gray-100 px-2 md:px-10 py-2 md:py-5">
+    <header className="sticky top-0 z-50 bg-white md:border-b border-gray-100 px-2 md:px-10 py-2 md:py-5">
 
       {/* ---------------- LAPTOP VIEW (UNCHANGED) ---------------- */}
       <div className="hidden md:flex max-w-7xl mx-auto items-center justify-between">
@@ -34,28 +34,26 @@ export default function Navbar({ setView, searchTerm, setSearchTerm, syneClass }
       </div>
 
 
-      {/* ---------------- MOBILE VIEW ---------------- */}
-      <div className="md:hidden max-w-7xl mx-auto">
+      {/* ---------------- MOBILE VIEW (CENTERED) ---------------- */}
+      <div className="md:hidden flex flex-col items-center pt-6 pb-3">
 
-        {/* Logo */}
-        <div className="flex justify-start px-2">
+        {/* Logo - Centered and slightly larger */}
+        <div className="mb-5">
           <div
-            className={`${syneClass} text-lg tracking-tighter text-blue-600 cursor-pointer`}
+            className={`${syneClass} text-2xl tracking-tighter text-blue-600 cursor-pointer italic font-bold`}
             onClick={() => setView("home")}
           >
             RomeXity
           </div>
         </div>
 
-        {/* Search */}
-        <div className="mt-1 mb-[5px] flex justify-start px-2">
+        {/* Search - Centered below logo with original bar sizing */}
+        <div className="w-full px-4 flex justify-center">
           <SearchBar
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
           />
         </div>
-
-        
 
       </div>
 
