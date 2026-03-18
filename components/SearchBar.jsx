@@ -8,7 +8,7 @@ export default function SearchBar({ searchTerm, setSearchTerm }) {
         {/* Input */}
         <input
           type="text"
-          placeholder="Search 'hotel', 'biriyani'..."
+          placeholder="Search what you need"
           className="flex-1 min-w-0 bg-transparent outline-none text-sm text-gray-700 pl-1 md:px-4"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
