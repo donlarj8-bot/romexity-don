@@ -18,7 +18,7 @@ export default async function Page() {
     tags,
     phone,
     price,
-    mapUrl
+    googleMapsUrl // <--- Change "mapUrl" to this to match your schema
   }`;
   
   const shops = await client.fetch(query, {}, { next: { revalidate: 60 } });
