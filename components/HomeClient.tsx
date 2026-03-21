@@ -12,19 +12,15 @@ type Shop = {
   description: string;
   phone?: string;
   price?: string;
-  mapUrl?: string;
+  googleMapsUrl?: string; // Updated to match your new schema/query
 };
 
-// CHANGE 1: Function renamed and props added
 export default function HomeClient({ initialShops, syneClass }: { initialShops: Shop[], syneClass: string }) {
   const [view, setView] = useState("home"); 
   const [selectedShop, setSelectedShop] = useState<Shop | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
-  // CHANGE 3: shops initialized with server data
   const [shops] = useState<Shop[]>(initialShops);
 
-  // CHANGE 2: Fetching useEffect removed. 
-  // We only keep the "Restore from URL" logic.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const shopId = params.get('shop');
@@ -37,7 +33,6 @@ export default function HomeClient({ initialShops, syneClass }: { initialShops: 
     }
   }, [shops]);
 
-  // BACK BUTTON LOGIC
   useEffect(() => {
     const handlePopState = () => {
       const params = new URLSearchParams(window.location.search);
@@ -75,7 +70,7 @@ export default function HomeClient({ initialShops, syneClass }: { initialShops: 
         setView={setView} 
         searchTerm={searchTerm} 
         setSearchTerm={setSearchTerm} 
-        syneClass={syneClass} // CHANGE 4: Using prop instead of object
+        syneClass={syneClass} 
       />
 
       <main className="max-w-7xl mx-auto px-4 md:px-6 pt-1">
@@ -101,9 +96,21 @@ export default function HomeClient({ initialShops, syneClass }: { initialShops: 
                 <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed mb-4 max-w-md">
                   {selectedShop.description || "Premium experience available at this location."}
                 </p>
-                <div className="flex items-center gap-2 text-gray-400">
+                <div className="flex items-center gap-2 text-gray-400 mb-6">
                    <span className="text-[10px] font-black uppercase tracking-widest">{selectedShop.loc}</span>
                 </div>
+
+                {/* ADDED: SHOW DIRECTIONS BUTTON IN SHOP VIEW */}
+                {selectedShop.googleMapsUrl && (
+                  <a 
+                    href={selectedShop.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center bg-blue-600 text-white py-3 px-8 rounded-xl text-sm font-bold hover:bg-blue-700 transition-all duration-200 shadow-md w-fit"
+                  >
+                    📍 Show Directions
+                  </a>
+                )}
               </div>
             </div>
 
