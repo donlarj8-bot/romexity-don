@@ -9,16 +9,16 @@ const syne = Syne({
 
 export default async function Page() {
   // We fetch the data HERE on the server
+  // Removed "loc": location from the fields below
   const query = `*[_type == "store"]{
     _id,
     name,
     description,
-    "loc": location,
     "img": mainImage.asset->url,
     tags,
     phone,
     price,
-    googleMapsUrl // <--- Change "mapUrl" to this to match your schema
+    googleMapsUrl
   }`;
   
   const shops = await client.fetch(query, {}, { next: { revalidate: 60 } });

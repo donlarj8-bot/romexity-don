@@ -6,13 +6,12 @@ import ShopGrid from '@/components/ShopGrid';
 type Shop = {
   _id: string;
   name: string;
-  loc: string;
   img: string;
   tags: string;
   description: string;
   phone?: string;
   price?: string;
-  googleMapsUrl?: string; // Updated to match your new schema/query
+  googleMapsUrl?: string; 
 };
 
 export default function HomeClient({ initialShops, syneClass }: { initialShops: Shop[], syneClass: string }) {
@@ -93,14 +92,13 @@ export default function HomeClient({ initialShops, syneClass }: { initialShops: 
                 <h1 className={`${syneClass} text-2xl md:text-4xl text-gray-900 leading-tight mb-2 uppercase`}>
                   {selectedShop.name}
                 </h1>
-                <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed mb-4 max-w-md">
+                <p className="text-gray-500 text-sm md:text-base font-medium leading-relaxed mb-6 max-w-md">
                   {selectedShop.description || "Premium experience available at this location."}
                 </p>
-                <div className="flex items-center gap-2 text-gray-400 mb-6">
-                   <span className="text-[10px] font-black uppercase tracking-widest">{selectedShop.loc}</span>
-                </div>
 
-                {/* ADDED: SHOW DIRECTIONS BUTTON IN SHOP VIEW */}
+                {/* Address block removed from here */}
+
+                {/* SHOW DIRECTIONS BUTTON IN SHOP VIEW */}
                 {selectedShop.googleMapsUrl && (
                   <a 
                     href={selectedShop.googleMapsUrl}

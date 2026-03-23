@@ -8,12 +8,6 @@ export default defineType({
     defineField({ name: 'name', type: 'string', title: 'Store Name' }),
     defineField({ name: 'description', type: 'text', title: 'Description' }),
     defineField({ 
-      name: 'location', 
-      type: 'string', 
-      title: 'Display Address', 
-      description: 'The text shown on the card (e.g. AYYAPPA SOCIETY MAIN ROAD)' 
-    }),
-    defineField({ 
       name: 'googleMapsUrl', 
       type: 'url', 
       title: 'Google Maps Link',

@@ -33,10 +33,7 @@ export default function ShopCard({ shop, setSelectedShop, setView }) {
           {shop.description}
         </p>
       
-        {/* Blue Address Text */}
-        <p className="text-[11px] font-bold text-blue-600 uppercase tracking-tight">
-          {shop.loc}
-        </p>
+        {/* Blue Address Text Block Removed From Here */}
 
         {/* Show Directions Button */}
         {shop.googleMapsUrl && (
