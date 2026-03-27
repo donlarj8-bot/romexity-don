@@ -1,28 +1,38 @@
 'use client'
 
-/**
- * This configuration is used to for the Sanity Studio that’s mounted on the `\app\studio\[[...tool]]\page.tsx` route
- */
-
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
-
-// FIXED: Removed '/app' because the sanity folder is now in the root
+import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schemaTypes'
-import {structure} from './sanity/structure'
 
 export default defineConfig({
   basePath: '/studio',
   projectId,
   dataset,
-  // Add and edit the content schema in the './sanity/schemaTypes' folder
   schema,
   plugins: [
-    structureTool({structure}),
-    // Vision is for querying with GROQ from inside the Studio
-    // https://www.sanity.io/docs/the-vision-plugin
+    structureTool({
+      structure: (S, context) =>
+        S.list()
+          .title('Content')
+          .items([
+            // 1. The "Easy Sort" tool for moving things
+            orderableDocumentListDeskItem({
+              type: 'store',
+              title: 'Rank Shops (Easy Sort)',
+              S,
+              context
+            }),
+            
+            S.divider(),
+
+            // 2. THIS IS NOW BACK: Your original "Stores" folder
+            // It will now show every document type, including Stores
+            ...S.documentTypeListItems(),
+          ]),
+    }),
     visionTool({defaultApiVersion: apiVersion}),
   ],
 })

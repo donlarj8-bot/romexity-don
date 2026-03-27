@@ -1,28 +1,27 @@
 import { defineField, defineType } from 'sanity'
+// FIXED: Using the @ scoped name you just installed
+import { orderRankField, orderRankOrdering } from '@sanity/orderable-document-list'
 
 export default defineType({
   name: 'store',
   type: 'document',
   title: 'Stores',
+  orderings: [orderRankOrdering],
   fields: [
+    orderRankField({ type: 'store' }),
+    
     defineField({ name: 'name', type: 'string', title: 'Store Name' }),
     
-    // Auto-Logic: Strictly ignores drafts to find the true next number
     defineField({ 
       name: 'orderNumber', 
       type: 'number', 
-      title: 'Order Number',
-      description: 'Automatically calculates the next position (e.g., 237).',
+      title: 'Order Number (Reference)',
+      description: 'Auto-calculated ID for reference.',
+      readOnly: true, 
       initialValue: async (items, { getClient }) => {
-        // Use a stable API version
         const client = getClient({ apiVersion: '2024-01-01' });
-        
-        // This query ignores drafts and ONLY looks at published documents
         const query = `*[_type == "store" && !(_id in path("drafts.**"))] | order(orderNumber desc)[0].orderNumber`;
-        
         const lastNumber = await client.fetch(query);
-        
-        // If it finds a published number, add 1. Otherwise, start at 1.
         return (lastNumber || 0) + 1;
       },
     }),

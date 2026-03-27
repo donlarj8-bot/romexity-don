@@ -8,9 +8,8 @@ const syne = Syne({
 });
 
 export default async function Page() {
-  // We fetch the data HERE on the server
-  // Added orderNumber and sorted by it (asc = ascending, 1 to 236)
-  const query = `*[_type == "store"] | order(orderNumber asc) {
+  // UPDATED: Now sorting by orderRank (the "Easy Sort" value) instead of orderNumber
+  const query = `*[_type == "store"] | order(orderRank asc) {
     _id,
     name,
     orderNumber,
@@ -22,6 +21,7 @@ export default async function Page() {
     googleMapsUrl
   }`;
   
+  // revalidate: 60 means it checks for changes every 60 seconds
   const shops = await client.fetch(query, {}, { next: { revalidate: 60 } });
 
   return (
