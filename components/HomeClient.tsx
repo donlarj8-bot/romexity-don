@@ -6,6 +6,7 @@ import ShopGrid from '@/components/ShopGrid';
 type Shop = {
   _id: string;
   name: string;
+  orderNumber?: number; // <--- Added this line
   img: string;
   tags: string;
   description: string;
@@ -96,9 +97,6 @@ export default function HomeClient({ initialShops, syneClass }: { initialShops: 
                   {selectedShop.description || "Premium experience available at this location."}
                 </p>
 
-                {/* Address block removed from here */}
-
-                {/* SHOW DIRECTIONS BUTTON IN SHOP VIEW */}
                 {selectedShop.googleMapsUrl && (
                   <a 
                     href={selectedShop.googleMapsUrl}

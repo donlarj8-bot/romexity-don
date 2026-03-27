@@ -9,10 +9,11 @@ const syne = Syne({
 
 export default async function Page() {
   // We fetch the data HERE on the server
-  // Removed "loc": location from the fields below
-  const query = `*[_type == "store"]{
+  // Added orderNumber and sorted by it (asc = ascending, 1 to 236)
+  const query = `*[_type == "store"] | order(orderNumber asc) {
     _id,
     name,
+    orderNumber,
     description,
     "img": mainImage.asset->url,
     tags,
