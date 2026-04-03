@@ -1,22 +1,20 @@
 import { defineField, defineType } from 'sanity'
-// FIXED: Using the @ scoped name you just installed
-import { orderRankField, orderRankOrdering } from '@sanity/orderable-document-list'
 
 export default defineType({
   name: 'store',
   type: 'document',
   title: 'Stores',
-  orderings: [orderRankOrdering],
+  // REMOVED: orderings: [orderRankOrdering]
   fields: [
-    orderRankField({ type: 'store' }),
+    // REMOVED: orderRankField({ type: 'store' })
     
     defineField({ name: 'name', type: 'string', title: 'Store Name' }),
     
     defineField({ 
       name: 'orderNumber', 
       type: 'number', 
-      title: 'Order Number (Reference)',
-      description: 'Auto-calculated ID for reference.', 
+      title: 'Order Number',
+      description: 'Type a number here and click "Publish & Swap" to change positions.',
       initialValue: async (items, { getClient }) => {
         const client = getClient({ apiVersion: '2024-01-01' });
         const query = `*[_type == "store" && !(_id in path("drafts.**"))] | order(orderNumber desc)[0].orderNumber`;

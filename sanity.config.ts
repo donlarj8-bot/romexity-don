@@ -3,11 +3,11 @@
 import {visionTool} from '@sanity/vision'
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
-import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
+// REMOVED: The import for the orderable plugin that was causing the error
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schemaTypes'
 
-// 1. ADDED: Import the "Swap Brain" you just created
+// KEEP THIS: This is your custom "Swap Brain" logic
 import { SwapOrderAction } from './sanity/actions/swapOrderAction'
 
 export default defineConfig({
@@ -16,28 +16,12 @@ export default defineConfig({
   dataset,
   schema,
   plugins: [
-    structureTool({
-      structure: (S, context) =>
-        S.list()
-          .title('Content')
-          .items([
-            orderableDocumentListDeskItem({
-              type: 'store',
-              title: 'Rank Shops (Easy Sort)',
-              S,
-              context
-            }),
-            
-            S.divider(),
-
-            ...S.documentTypeListItems(),
-          ]),
-    }),
+    // FIXED: Simplified the structure tool to remove the missing plugin
+    structureTool(),
     visionTool({defaultApiVersion: apiVersion}),
   ],
   
-  // 2. ADDED: This tells Sanity to replace the regular "Publish" button 
-  // with our new "Publish & Swap" button for Stores.
+  // This replaces the regular "Publish" button with our new "Publish & Swap" button
   document: {
     actions: (prev, context) => {
       return context.schemaType === 'store'
