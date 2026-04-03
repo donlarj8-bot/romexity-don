@@ -7,6 +7,9 @@ import { orderableDocumentListDeskItem } from '@sanity/orderable-document-list'
 import {apiVersion, dataset, projectId} from './sanity/env'
 import {schema} from './sanity/schemaTypes'
 
+// 1. ADDED: Import the "Swap Brain" you just created
+import { SwapOrderAction } from './sanity/actions/swapOrderAction'
+
 export default defineConfig({
   basePath: '/studio',
   projectId,
@@ -18,7 +21,6 @@ export default defineConfig({
         S.list()
           .title('Content')
           .items([
-            // 1. The "Easy Sort" tool for moving things
             orderableDocumentListDeskItem({
               type: 'store',
               title: 'Rank Shops (Easy Sort)',
@@ -28,11 +30,21 @@ export default defineConfig({
             
             S.divider(),
 
-            // 2. THIS IS NOW BACK: Your original "Stores" folder
-            // It will now show every document type, including Stores
             ...S.documentTypeListItems(),
           ]),
     }),
     visionTool({defaultApiVersion: apiVersion}),
   ],
+  
+  // 2. ADDED: This tells Sanity to replace the regular "Publish" button 
+  // with our new "Publish & Swap" button for Stores.
+  document: {
+    actions: (prev, context) => {
+      return context.schemaType === 'store'
+        ? prev.map((originalAction) =>
+            originalAction.action === 'publish' ? SwapOrderAction : originalAction
+          )
+        : prev
+    },
+  },
 })

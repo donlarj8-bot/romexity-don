@@ -16,8 +16,7 @@ export default defineType({
       name: 'orderNumber', 
       type: 'number', 
       title: 'Order Number (Reference)',
-      description: 'Auto-calculated ID for reference.',
-      readOnly: true, 
+      description: 'Auto-calculated ID for reference.', 
       initialValue: async (items, { getClient }) => {
         const client = getClient({ apiVersion: '2024-01-01' });
         const query = `*[_type == "store" && !(_id in path("drafts.**"))] | order(orderNumber desc)[0].orderNumber`;

@@ -1,3 +1,5 @@
+// app/page.tsx
+
 import { Syne } from 'next/font/google';
 import { client } from '@/sanity/lib/client'; 
 import HomeClient from '@/components/HomeClient';
@@ -8,8 +10,9 @@ const syne = Syne({
 });
 
 export default async function Page() {
-  // UPDATED: Now sorting by orderRank (the "Easy Sort" value) instead of orderNumber
-  const query = `*[_type == "store"] | order(orderRank asc) {
+  // 1. FIXED: Sorting by orderNumber (asc = 1, 2, 3...)
+  // 2. ADDED: _updatedAt to help debug if data is fresh
+  const query = `*[_type == "store"] | order(orderNumber asc) {
     _id,
     name,
     orderNumber,
@@ -18,11 +21,13 @@ export default async function Page() {
     tags,
     phone,
     price,
-    googleMapsUrl
+    googleMapsUrl,
+    _updatedAt
   }`;
   
-  // revalidate: 60 means it checks for changes every 60 seconds
-  const shops = await client.fetch(query, {}, { next: { revalidate: 60 } });
+  // 3. NOTE: The 'revalidate: 0' forces Next.js to get fresh data every time 
+  // you refresh the page. Change this back to 60 once you are done testing.
+  const shops = await client.fetch(query, {}, { next: { revalidate: 0 } });
 
   return (
     <HomeClient 
